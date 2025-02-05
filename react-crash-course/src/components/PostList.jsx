@@ -12,10 +12,10 @@ function PostList() {
       {posts && posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post, index) => (
-            <Post body={post.body} author={post.author} key={index}></Post>
+            <Post body={post.body} author={post.author} key={index} id={post.id}></Post>
           ))}
         </ul>
-      )}
+      )} 
       {posts && posts.length === 0 && (
         <div style={{ textAlign: 'center', color: 'white' }}>
           <h2>There are not posts yet.</h2>
